@@ -4,11 +4,12 @@ import NavBar from "../NavBar/NavBar";
 
 const Header = () => {
     return (
-        <header className="">
+        <header className="bg-primary">
+            <div className="container">
         
-        <NavBar />
-      
-    </header>
+                <NavBar />
+            </div>
+        </header>
     )
 }
 
