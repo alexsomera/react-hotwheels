@@ -1,12 +1,33 @@
 import React from "react";
+import Anchor from "../Anchor/Anchor";
+const links = [
+  {
+    id: 1,
+    url: "/",
+    text: "Home",
+  },
+  {
+    id: 2,
+    url: "/about",
+    text: "Sobre",
+  },
+  {
+    id: 3,
+    url: "/cars",
+    text: "Carrros",
+  },
+  {
+    id: 4,
+    url: "/add",
+    text: "Adicionar Carro",
+  },
+];
 
 
 const NavBar = () => {
   return (
-
       <nav className="navbar navbar-dark navbar-expand-md">
         <img src={process.env.PUBLIC_URL + 'logo.png'} className="" alt="logo" width={180} height={68} />
-
         <button
           className="navbar-toggler"
           type="button"
@@ -18,32 +39,19 @@ const NavBar = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul className="navbar-nav text-white">
-            <li className="nav-item">
-              <a href="" className="nav-link">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="" className="nav-link">
-                Sobre
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="" className="nav-link">
-                Carros
-              </a>
-            </li>
-            <li className="nav-item">
-            <a href="adicionar" className="btn btn-warning">
-            Adicionar Carro
-          </a>
-              </li>
+          <ul className="navbar-nav">
+            {links.map((link) => {
+              return (
+                <li key={link.id} className="nav-item">
+                  <Anchor className="nav-link" href={link.url}>
+                    {link.text}
+                  </Anchor>
+                </li>
+              );
+            })}
           </ul>
-          
         </div>
       </nav>
-
   );
 };
 

@@ -2,27 +2,36 @@
 import React from "react";
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle"
-import "./App.css";
 import Home from "./components/Home/Home";
 import CarForm from "./components/CarForm/CarForm";
 import CarsList from "./components/CarsList/CarsList";
 import CarDetail from "./components/CarDetail/CarDetail";
 import About from "./components/About/About";
+import NotFound from "./components/NotFound/NotFound";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 
 
 function App() {
+  
+  const componentes = {
+    "/": <Home />,
+    "/home": <Home />,
+    "/about": <About />,
+    "/add": <CarForm />,
+    "/cars": <CarsList />,
+    "/car-detail": <CarDetail />,
+    "/not-found": <NotFound />,
+  };
+  
+  const url = window.location.pathname;
+
   return (
     <>
-      <Header />
-      <Home />
-      {/* <CarForm /> */}
-      {/* <CarsList /> */}
-      {/* <CarDetail /> */}
-      {/* <About /> */}
+      <Header className="bg-primary" />
+      {componentes[url] || componentes["/not-found"]}
       <Footer />
     </>
   );

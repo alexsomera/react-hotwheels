@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "../Button/Button";
+import Modal from "../Modal/Modal";
 import * as bootstrap from "bootstrap";
-
 const CarForm = () => {
 
     const setAlert = (message) => {
@@ -53,9 +53,6 @@ const CarForm = () => {
 
     }
 
-
-
-
     return (
         <main className="container">
             <h1>Adicionar Carro</h1>
@@ -97,20 +94,7 @@ const CarForm = () => {
 
             </form>
 
-            <div className="modal fade" id="modal" tabIndex="-1" aria-labelledby="modalLabel" aria-hidden="true">
-                <div className="modal-dialog">
-                    <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="modalLabel"></h5>
-                            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div className="modal-footer">
-                            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <Modal />
 
         </main>
     );

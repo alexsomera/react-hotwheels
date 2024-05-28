@@ -35,3 +35,15 @@ form {
   padding: 15px;
   margin: auto;
 }
+
+.navbar .nav-item:last-child {
+  background-color: var(--bs-warning);
+  border-radius: .5rem;
+  padding: .25rem 1rem;
+  max-width: fit-content;
+}
+
+.navbar .nav-item:last-child .nav-link {
+  color: var(--bs-dark);
+  display: inline-block;
+}
