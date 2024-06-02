@@ -14,7 +14,7 @@ const links = [
   {
     id: 3,
     url: "/cars",
-    text: "Carrros",
+    text: "Carros",
   },
   {
     id: 4,

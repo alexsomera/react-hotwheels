@@ -1,80 +1,32 @@
 import React, { useState } from "react";
 
 import carsData from "../../carsData";
-import Button from "../Button/Button";
+import Anchor from "../Anchor/Anchor";
 
+if (!localStorage.getItem("cars")) {
+    localStorage.setItem("cars", JSON.stringify(carsData));
+}
 
+const carros = JSON.parse(localStorage.getItem("cars"));
 
 export default function CarsList() {
 
-    const [cars, setCars] = useState([...carsData]);
+    const [cars, setCars] = useState([...carros]);
+
+
 
     function deleteCar(id) {
         setCars(cars.filter((car) => car.id !== id));
+        localStorage.setItem("cars", JSON.stringify(cars.filter((car) => car.id !== id)));
     }
 
     function editCar(id) {
-        const form = `
-        <form className="form-editar" onSubmit={(e) => saveCar(e)}>
-                    <div className="mb-4">
-                        <label htmlFor="marca" className="form-label" >
-                            Marca
-                        </label>
-                        <input type="text" className="form-control" id="marca" value={car.brand} />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="modelo" className="form-label">
-                            Modelo
-                        </label>
-                        <input type="text" className="form-control" id="modelo" value={car.model} />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="ano" className="form-label">
-                            Ano
-                        </label>
-                        <input type="number" className="form-control" id="ano" value={car.year} />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="cor" className="form-label">
-                            Cor
-                        </label>
-                        <input type="text" className="form-control" id="cor" value={car.color} />
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="preco" className="form-label">
-                            Preço
-                        </label>
-                        <input type="number" className="form-control" id="preco" value={car.price} />
-                    </div>
-
-                    <Button type="submit" className="btn btn-warning">
-                        Salvar
-                    </Button>
-                </form>
+        const carEdit = cars.find((car) => car.id === id);
         
-        `;
-        setCars(cars.map((car) => {
-            if (car.id === id) {
-                document.querySelector("main").append = form;
-           
-        
-
-
-            }
-            return car;
-        }));
+        console.log(carEdit);
+        window.location.href = "/add?id=" + id;
 
     }
-
-
-        
-
-
-
-
-
-
-
 
     return (
         <main className="container">
@@ -102,18 +54,18 @@ export default function CarsList() {
                             <td>{car.price}</td>
                             <td>
                                 <span className="btn btn-warning" onClick={() => editCar(car.id)}>Editar</span>
+                                &nbsp;
                                 <span className="btn btn-danger" onClick={() => deleteCar(car.id)}>Excluir</span>
                             </td>
                         </tr>
                     ))}
                 </tbody>
 
-                
-
-
-
             </table>
 
+            <Anchor href="/add" className="btn btn-primary">
+                Adicionar Carro
+            </Anchor>
 
         </main>
     );

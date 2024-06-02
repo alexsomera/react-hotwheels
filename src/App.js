@@ -5,14 +5,11 @@ import Footer from './components/Footer/Footer';
 import Home from "./components/Home/Home";
 import CarForm from "./components/CarForm/CarForm";
 import CarsList from "./components/CarsList/CarsList";
-import CarDetail from "./components/CarDetail/CarDetail";
 import About from "./components/About/About";
 import NotFound from "./components/NotFound/NotFound";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-
-
 
 function App() {
   
@@ -22,7 +19,6 @@ function App() {
     "/about": <About />,
     "/add": <CarForm />,
     "/cars": <CarsList />,
-    "/car-detail": <CarDetail />,
     "/not-found": <NotFound />,
   };
   
