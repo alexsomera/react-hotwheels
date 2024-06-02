@@ -1,52 +1,74 @@
+## Nome: `Alex Fernando Somera`
 
-Após acessar a pasta do projeto, digitar no terminal
+Para executar este projeto:
 
-### `npm install`
+1. Entre pasta react-hotwheels no terminal:
+```
+cd react-hotwheels
+```
 
-para instalar as dependências do projeto.
+2. Rode npm install para instalar as dependências do projeto:
 
 
-Para roda a aplicação, digiral no terminal
+```
+npm install
+```
 
-### `npm start`
+3. E em seguida, npm start, para iniciar a execução do projeto.
+
+```
+npm start
+```
+
+Após execução do projeto, este é o resultado esperado no navegador:
+![Gif mostrando o resultado esperado ao rodar este projeto](./resultado.png)
 
 Acessar [http://localhost:3000](http://localhost:3000) para visualizar a aplicação no browser.
 
+## Introdução
 
-## Descrição dos componentes criados
+Este projeto contém uma estrutura básica criada a partir do comando Create React App.
 
-### About
-Página Com breve descrição sobre o proejto
+## Componentes
 
-### Anchor
-Componente de link.
+Os componentes estão no diretório `./src/components` e são os seguintes:
 
-### Button
-Componente de botão reutilizável, usado em várias partes da aplicação.
+- About
+Descrição: Página Com breve descrição sobre o proejto
 
-### CarForm
-Componente de formulário para adicionar um carro.
+- Anchor
+Descrição: Componente de link.
 
-### CarsList
-Componente de listagem dos carros cadastrados e que permite excluir e editar um carro.
+- Button
+Descrição: Componente de botão reutilizável, usado em várias partes da aplicação.
 
-### Footer
-Componente de rodapé, exibindo informações do projeto e do desenvolvedor.
+- CarForm
+Descrição: Componente de formulário para adicionar um carro.
 
-### FormItem
-Componente contendo um item de formulário composto pelo input e seu respectivo label.
+- CarsList
+Descrição: Componente de listagem dos carros cadastrados e que permite excluir e editar um carro.
 
-### Header
-Componente de cabeçalho, contendo o logotipo e a navegação principal da aplicação.
+- Footer
+Descrição: Componente de rodapé, exibindo informações do projeto e do desenvolvedor.
 
-### Home
-Página inicial da aplicação, exibindo informações a tela de boas-vindas e links para os principais recursos.
+- FormItem
+Descrição: Componente contendo um item de formulário composto pelo input e seu respectivo label.
 
-### Modal
-Componente de modal reutilizável, usado para exibir conteúdo em uma sobreposição na tela.
+- Header
+Descrição: Componente de cabeçalho, contendo o logotipo e a navegação principal da aplicação.
 
-### Navbar
-Componente contendo os links de navegação da aplicação
+- Home
+Descrição: Página inicial da aplicação, exibindo informações a tela de boas-vindas e links para os principais recursos.
 
-### NotFound
-Página de erro 404, exibida quando um URL inválido é acessado.
+- Modal
+Descrição: Componente de modal reutilizável, usado para exibir conteúdo em uma sobreposição na tela.
+
+- Navbar
+Descrição: Componente contendo os links de navegação da aplicação
+
+- NotFound
+Descrição: Página de erro 404, exibida quando um URL inválido é acessado.
+
+## Conclusão
+
+Este projeto é apenas para fins demonstrativos e seu objetivo é unicamente demostrar algumas funcionalidades úteis para o desenvolvimento de projetos em ReactJS.

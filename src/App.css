@@ -36,14 +36,43 @@ form {
   margin: auto;
 }
 
+.nav-link {
+  margin: .5rem;
+}
+
 .navbar .nav-item:last-child {
   background-color: var(--bs-warning);
   border-radius: .5rem;
-  padding: .25rem 1rem;
+  padding: 0.375rem 0.75rem;
   max-width: fit-content;
+  margin: 10px .5rem;
+  height: fit-content;
 }
 
 .navbar .nav-item:last-child .nav-link {
   color: var(--bs-dark);
   display: inline-block;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .navbar .nav-item:last-child {
+    margin-left: 20px;
+  }
+  
+}
+
+.link-action {
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+}
+
+.link-action:hover {
+  text-decoration: underline;
+}
+
+table {
+  max-width: 800px;
 }

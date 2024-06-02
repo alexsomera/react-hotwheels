@@ -31,7 +31,7 @@ export default function CarsList() {
     return (
         <main className="container">
             <h1>Lista de Carros Hot Wheels</h1>
-            <table className="table">
+            <table className="table table-sm table-hover table-stripped">
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
@@ -53,9 +53,8 @@ export default function CarsList() {
                             <td>{car.color}</td>
                             <td>{car.price}</td>
                             <td>
-                                <span className="btn btn-warning" onClick={() => editCar(car.id)}>Editar</span>
-                                &nbsp;
-                                <span className="btn btn-danger" onClick={() => deleteCar(car.id)}>Excluir</span>
+                                <span className="link-action text-info" onClick={() => editCar(car.id)}>Editar</span>
+                                <span className="link-action text-danger" onClick={() => deleteCar(car.id)}>Excluir</span>
                             </td>
                         </tr>
                     ))}
@@ -63,7 +62,7 @@ export default function CarsList() {
 
             </table>
 
-            <Anchor href="/add" className="btn btn-primary">
+            <Anchor href="/add" className="btn btn-warning">
                 Adicionar Carro
             </Anchor>
 

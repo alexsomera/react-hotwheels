@@ -27,7 +27,9 @@ const links = [
 const NavBar = () => {
   return (
       <nav className="navbar navbar-dark navbar-expand-md">
+        <Anchor className="navbar-brand" href="/">
         <img src={process.env.PUBLIC_URL + 'logo.png'} className="" alt="logo" width={180} height={68} />
+        </Anchor>
         <button
           className="navbar-toggler"
           type="button"

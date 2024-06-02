@@ -4,6 +4,7 @@ import Modal from "../Modal/Modal";
 import * as bootstrap from "bootstrap";
 import carsData from "../../carsData";
 import FormItem from "../FormItem/FormItem";
+import Anchor from "../Anchor/Anchor";
 
 if (!localStorage.getItem("cars")) {
     localStorage.setItem("cars", JSON.stringify(carsData));
@@ -121,6 +122,9 @@ const CarForm = () => {
                 <Button type="submit" className="btn btn-warning">
                     {car.id ? "Salvar Alterações" : "Adicionar Carro"}
                 </Button>
+                <Anchor href="/cars" className="btn btn-default">
+                    Cancelar
+                </Anchor>
 
             </form>
 
